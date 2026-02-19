@@ -8,11 +8,6 @@ import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
-  Download,
-  Mail,
-  Briefcase,
-  FolderOpen,
-  Headphones,
   Palette,
   Globe,
   Megaphone,
@@ -22,12 +17,6 @@ import {
 
 /* ─── Data ─── */
 const NAV_LINKS = ["Home", "Services", "Works", "Blog", "Contact"]
-
-const STATS = [
-  { icon: Briefcase, value: "7 years", label: "Experience" },
-  { icon: FolderOpen, value: "500+ Projects", label: "Completed" },
-  { icon: Headphones, value: "Online 24/7", label: "Support" },
-]
 
 const SERVICES = [
   {
@@ -151,23 +140,6 @@ export default function PortfolioPage() {
             <p className="mb-8 max-w-md leading-relaxed text-gray-500">
               With 7 years of professional experience in video editing and visual design, I am currently studying the App Development program at RRC Polytech in Winnipeg, Canada. I am dedicated to achieving a perfect integration of exquisite visual aesthetics and rigorous code logic.
             </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-forest/25 transition hover:bg-forest-dark"
-              >
-                <Download className="h-4 w-4" />
-                Download CV
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-forest px-6 py-3 text-sm font-semibold text-forest transition hover:bg-forest hover:text-white"
-              >
-                <Mail className="h-4 w-4" />
-                Contact
-              </a>
-            </div>
           </div>
 
           {/* Image */}
@@ -182,23 +154,6 @@ export default function PortfolioPage() {
                 priority
               />
             </div>
-          </div>
-        </div>
-
-        {/* Stats Bar */}
-        <div className="mx-auto -mt-4 mb-8 max-w-3xl px-6 md:mb-0 md:-mt-8">
-          <div className="grid grid-cols-1 gap-4 rounded-2xl bg-white p-6 shadow-xl shadow-gray-200/60 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-gray-100">
-            {STATS.map(({ icon: Icon, value, label }) => (
-              <div key={value} className="flex items-center gap-3 px-4 py-2 sm:justify-center">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-forest-50 text-forest">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-gray-900">{value}</p>
-                  <p className="text-xs text-forest">{label}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
